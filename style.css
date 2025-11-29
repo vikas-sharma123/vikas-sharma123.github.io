@@ -296,12 +296,22 @@ nav {
 
 /* Sections Global */
 .section {
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
+  /* Reduced from 6rem */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.section-divider {
+  width: 100%;
+  max-width: 800px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  margin: 0 auto;
+  opacity: 0.3;
 }
 
 .section-title {
@@ -434,18 +444,40 @@ nav {
   transition: var(--transition);
 }
 
-.image-card {
+.education-card {
   grid-column: span 1;
-  padding: 0;
   background: var(--accent-gradient);
+  color: white;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.bento-img-placeholder {
-  font-size: 4rem;
-  color: rgba(255, 255, 255, 0.2);
+.education-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.edu-details h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.edu-details p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.edu-focus {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
 }
 
 /* Responsive Bento */
@@ -458,7 +490,7 @@ nav {
   .bio-card,
   .stats-card,
   .tech-card,
-  .image-card {
+  .education-card {
     grid-column: span 1;
     grid-row: span 1;
   }
