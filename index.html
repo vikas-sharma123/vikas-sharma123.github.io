@@ -73,7 +73,7 @@
             <p style="margin-top: 1rem;">
               My journey involves solving real-world problems through code—whether it's optimizing database queries for
               <b>Flatify</b> or architecting secure systems for <b>ZeroTrace</b>. Beyond the screen, I'm a competitive
-              <b>basketball player</b> 🏀 and an avid <b>traveler</b> 🌍 always ready to explore new horizons.
+              <b>basketball player</b> and an avid <b>traveler</b> always ready to explore new horizons.
             </p>
           </div>
           <div class="bento-card stats-card">
@@ -135,7 +135,7 @@
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-info">
-              <h3>🚫 ZeroTrace</h3>
+              <h3>ZeroTrace</h3>
               <p>Privacy-focused project exploring secure data handling and anonymity concepts.</p>
               <div class="tech-stack">
                 <span>Python</span>
@@ -149,7 +149,7 @@
           </div>
           <div class="project-card">
             <div class="project-info">
-              <h3>🏠 Flatify</h3>
+              <h3>Flatify</h3>
               <p>A student-life management tool featuring a roommate dashboard and productivity utilities.</p>
               <div class="tech-stack">
                 <span>Web Dev</span>
@@ -163,7 +163,7 @@
           </div>
           <div class="project-card">
             <div class="project-info">
-              <h3>🎨 PictoPy</h3>
+              <h3>PictoPy</h3>
               <p>Creative coding project using Python for art, visualization, and interactive design.</p>
               <div class="tech-stack">
                 <span>Python</span>
@@ -201,15 +201,16 @@
               </div>
             </div>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="cd2e4673-b5cf-40a3-a93b-c3accfa67749">
             <div class="form-group">
-              <input type="text" placeholder="Name" required>
+              <input type="text" name="name" placeholder="Name" required>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Email" required>
+              <input type="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-group">
-              <textarea placeholder="Message" rows="5" required></textarea>
+              <textarea name="message" placeholder="Message" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn primary">Send Message</button>
           </form>

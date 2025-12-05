@@ -55,12 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(textLoad, 12000);
 
     // Custom Cursor Logic
+
     const cursor = document.querySelector('.cursor');
     const cursor2 = document.querySelector('.cursor2');
 
+    let mouseX = 0;
+    let mouseY = 0;
+
     document.addEventListener('mousemove', function (e) {
-        cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        mouseX = e.clientX;
+        mouseY = e.clientY;
     });
+
+    function animateCursor() {
+        cursor.style.left = mouseX + "px";
+        cursor.style.top = mouseY + "px";
+        cursor2.style.left = mouseX + "px";
+        cursor2.style.top = mouseY + "px";
+        requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
 
     // Cursor Effects on Hover
     const hoverables = document.querySelectorAll('a, .btn, .project-card, .skill-card, .bento-card, .contact-info, .contact-form, .hamburger');
